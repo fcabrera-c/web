@@ -6,7 +6,6 @@ Given(/^we validate the first section of Nuestra firma$/, function() {
   expect($(".bold")).to.exist();
   expect($(".theme-light")).to.exist();
   expect($(".theme-dark")).to.exist();
-  browser.screenshot().saveTo('C:/Users/Anzen/Documents/Minium/Evidencias Web/Nuestra firma/sec1.png');
   $(":root").waitTime(3, timeUnits.SECONDS);
 });
 
@@ -15,7 +14,6 @@ Given(/^we validate the second section of Nuestra firma$/, function() {
   expect($(".business > div:nth-child(1) > img:nth-child(1)")).to.exist();
   expect($(".business > div:nth-child(2) > div:nth-child(1)")).to.exist();
   expect($(".business > div:nth-child(2) > div:nth-child(2)")).to.exist();
-  browser.screenshot().saveTo('C:/Users/Anzen/Documents/Minium/Evidencias Web/Nuestra firma/sec2.png');
   $(":root").waitTime(3, timeUnits.SECONDS);
 });
 
@@ -28,7 +26,6 @@ Given(/^we validate the third section of Nuestra firma$/, function() {
   expect($("div.c-3:nth-child(2)")).to.exist();
   expect($("div.c-3:nth-child(3)")).to.exist();
   expect($("div.c-3:nth-child(4)")).to.exist();
-  browser.screenshot().saveTo('C:/Users/Anzen/Documents/Minium/Evidencias Web/Nuestra firma/sec3.png');
   $(":root").waitTime(3, timeUnits.SECONDS);
 });
 
@@ -80,7 +77,6 @@ Given(/^we validate the fourth section of Nuestra firma$/, function() {
   $(":root").waitTime(1, timeUnits.SECONDS);
   expect($("div.c-md-6:nth-child(15) > img:nth-child(1)")).to.have.text("");
   $("div.c-md-6:nth-child(15) > img:nth-child(1)").moveTo();
-  browser.screenshot().saveTo('C:/Users/Anzen/Documents/Minium/Evidencias Web/Nuestra firma/sec4.jpg');
   $(":root").waitTime(2, timeUnits.SECONDS);
 });
 
@@ -89,14 +85,12 @@ Given(/^we validate the fifth section of Nuestra firma$/, function() {
   expect($(".idea > div:nth-child(2) > div:nth-child(1)")).to.have.text("Impulsamos los negocios de hoy con la tecnología del mañana");
   expect($(".idea > div:nth-child(2) > div:nth-child(2)")).to.have.text("Trabajamos como un socio de innovación digital, mejorando la eficiencia del negocio por medio de estrategias omnicanal y Metodologías Ágiles.");
   expect($("a.ad-prod-body-1 > an-icon:nth-child(1)")).to.have.text("");
-  browser.screenshot().saveTo('C:/Users/Anzen/Documents/Minium/Evidencias Web/Nuestra firma/sec5.png');
   $(":root").waitTime(3, timeUnits.SECONDS);
 });
 
 Then(/^we switch the theme to dark$/, function() {
   $("body > app-root > div > div.body > ad-about-us > ad-header-about-us > div").scrollIntoView();
   $("body > app-root > div > div.body > ad-about-us > ad-header-about-us > div > div > div.dots > ad-theme-switch > div > div.theme-dark").click();
-  browser.screenshot().saveTo('C:/Users/Anzen/Documents/Minium/Evidencias Web/Nuestra firma/themdark.png');
   $(":root").waitTime(2, timeUnits.SECONDS);
   $(".body > ad-about-us:nth-child(2) > ad-business:nth-child(2) > div:nth-child(1)").scrollIntoView();
   $(":root").waitTime(2, timeUnits.SECONDS);
