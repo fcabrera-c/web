@@ -1,0 +1,41 @@
+# Web Drivers   
+minium:
+  webdriver:
+    desiredCapabilities:
+      browserName: chrome
+    window:
+      maximized: true
+    acceptInsecureCerts: false
+    javascriptEnabled: true
+    networkConnectionEnabled: true
+    setWindowRect: true
+    strictFileInteractability: true
+    webauthn:virtualAuthenticators: true
+    
+  developer:
+    webdrivers:
+      - name: firefox-with-profile
+        displayName: Firefox Profile
+        iconClass: icon-firefox
+        desiredCapabilities:
+          browserName: firefox
+        firefox_profile:
+          dir: C:\Users\minium\AppData\Roaming\Mozilla\Firefox\Profiles\xxxxxxxx.<profile-name>
+          extensions:
+            - ~\firefox-extensions\extension.xpi
+          loadNoFocusLib: false
+          acceptUntrustedCerts: true
+          untrustedCertIssuer: false
+          preferences:
+            - name: accessibility.accesskeycausesactivation
+              type: boolean
+              value: true
+
+
+# Configuration that can be injected in your tests
+  config:
+    searches:
+      Minium Github:
+        - https://github.com/viltgroup/minium
+      Selenium:
+        - https://selenium.dev/
