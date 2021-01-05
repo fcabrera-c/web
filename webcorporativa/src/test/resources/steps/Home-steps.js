@@ -121,7 +121,6 @@ Given(/^we change the theme to dark$/, function() {
   $("body > app-root > div > div.body > ad-home > ad-us > div").scrollIntoView();
   $("body > app-root > div > div.body > ad-home > ad-us > div > div > div.dots > ad-theme-switch > div > div.theme-dark").click();
   $(":root").waitTime(2, timeUnits.SECONDS);
-  browser.screenshot().saveTo('C:/Users/Anzen/Documents/Minium/Evidencias Web/Inicio/theme-dark.png');
   $("body > app-root > div > div.body > ad-home > ad-us > div > div > div.dots > ad-theme-switch > div > div.theme-light > an-icon").click();
   $(":root").waitTime(2, timeUnits.SECONDS);
 });
