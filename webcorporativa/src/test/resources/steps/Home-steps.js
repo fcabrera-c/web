@@ -135,9 +135,4 @@ Given(/^we validate the footer of page "([^"]*)"$/, function(arg1) {
   $(":root").waitTime(1, timeUnits.SECONDS);
   $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").moveTo();
   $(":root").waitTime(1, timeUnits.SECONDS);
-//  $("#main-footer > div > div > div > section > a.menu-social.footer-facebook").click();
-//  $("#main-footer > div > div > div > section > a.menu-social.footer-twitter").click();
-//  $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").click();
-//  $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").click();
-//  $(":root").waitTime(3, timeUnits.SECONDS);
 });
