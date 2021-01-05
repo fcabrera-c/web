@@ -134,5 +134,4 @@ Given(/^we validate the footer of page "([^"]*)"$/, function(arg1) {
   $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").moveTo();
   $(":root").waitTime(1, timeUnits.SECONDS);
   $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").moveTo();
-  $(":root").waitTime(1, timeUnits.SECONDS);
 });
