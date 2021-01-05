@@ -1,6 +1,6 @@
 # language: en
 # ------------------------------------------------------------------------------
-Feature: Validate modules Inicio and Nuestra firma
+Feature: Validate module Inicio
 
   Scenario: Access of sections of the  module Inicio
     Given we are at home page
