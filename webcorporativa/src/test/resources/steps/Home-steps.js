@@ -9,6 +9,7 @@ Given(/^we validate the first section of the page$/, function() {
   expect($(".bold")).to.exist();
   expect($(".active")).to.exist();
   expect($(".theme-dark")).to.exist();
+  browser.screenshot();
 });
 
 Given(/^we validate the second section of the page$/, function() {
