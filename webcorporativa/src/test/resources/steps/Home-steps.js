@@ -31,7 +31,6 @@ Given(/^we validate the third section of the page$/, function() {
   expect($(".tertiary-40")).to.exist();
   expect($(".tertiary-60")).to.exist();
   expect($(".tertiary-70")).to.exist();
-  var timeUnits = require("minium/timeunits");
   $(":root").waitTime(2, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
@@ -96,7 +95,6 @@ Given(/^we validate the seventh section of the page$/, function() {
   expect($("#colabora > div > div > div > h2")).to.have.text("Colabora con nosotros");
   expect($("#colabora > div > div > div > p")).to.have.text("Compártenos tu experiencia y evolucionemos juntos.");
   expect($("#colabora > div > div > div > a")).to.have.text("Ver todas las vacantes");
-  var timeUnits = require("minium/timeunits");
   $(":root").waitTime(2, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
@@ -106,28 +104,9 @@ Given(/^we validate the eigth section of the page$/, function() {
   expect($("#idea > div > div > div > an-tag > div")).to.have.text("Contacto");
   expect($("#idea > div > div > div > h2")).to.have.text("¿Tienes una idea?");
   expect($("#idea > div > div > div > a > an-icon")).to.exist("Cuéntanos sobre ella");
-  var timeUnits = require("minium/timeunits");
   $(":root").waitTime(2, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
-
-//Given(/^we validate all the links of each section$/, function() {
-//  $(".an-tag-tertiary-30").scrollIntoView();
-//  $("body > app-root > div > div.body > ad-home > ad-services > div > div > div.cards > div.card.ad-radius-m.ad-shadow-md.tertiary-20 > a").click();
-//  var timeUnits = require("minium/timeunits");
-//  $(":root").waitTime(3, timeUnits.SECONDS);
-//  $("body > app-root > div > div.body > ad-home > ad-services > div > div > div.cards > div.card.ad-radius-m.ad-shadow-md.tertiary-40 > a").click();
-//  $(":root").waitTime(3, timeUnits.SECONDS);
-//  $("body > app-root > div > div.body > ad-home > ad-services > div > div > div.cards > div.card.ad-radius-m.ad-shadow-md.tertiary-60 > a").click();
-//  $(":root").waitTime(3, timeUnits.SECONDS);
-//  $("body > app-root > div > div.body > ad-home > ad-services > div > div > div.cards > div.card.ad-radius-m.ad-shadow-md.tertiary-70 > a").click();
-//  $(":root").waitTime(3, timeUnits.SECONDS);
-//  $("body > app-root > div > div.body > ad-home > ad-projects > div > div > div.projects > a > an-icon").click();
-//  $(":root").waitTime(3, timeUnits.SECONDS);
-//  $("#colabora > div > div > div > a").click();
-//  $(":root").waitTime(3, timeUnits.SECONDS);
-//  $("#idea > div > div > div > a > an-icon").click();
-//});
 
 Given(/^we change the theme to dark$/, function() {
   $("body > app-root > div > div.body > ad-home > ad-us > div").scrollIntoView();
@@ -138,7 +117,7 @@ Given(/^we change the theme to dark$/, function() {
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
-Given(/^we validate the footer of page "([^"]*)"$/, function(arg1) {
+Given(/^we validate the footer of page "([^"]*)"$/, function() {
   $("#main-footer > div > div > div > figure > img").scrollIntoView();
   $("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon").moveTo();
   $("#main-footer > div > div > div > section > a.menu-social.footer-twitter").moveTo();
