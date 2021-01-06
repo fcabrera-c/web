@@ -1,9 +1,9 @@
-//var scenario;
+var scenario;
 
-//Before(function (s) {
-  //scenario = s;
-//});
+Before(function (s) {
+  scenario = s;
+});
 
-//After(function (s) {
-  //scenario.embed(browser.screenshot().asBytes(), "image/png");
-//});
+After(function (s) {
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
+});
