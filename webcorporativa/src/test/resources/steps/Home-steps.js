@@ -9,6 +9,7 @@ Given(/^we validate the first section of the page$/, function() {
   expect($(".bold")).to.exist();
   expect($(".active")).to.exist();
   expect($(".theme-dark")).to.exist();
+  $(":root").waitTime(2, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
