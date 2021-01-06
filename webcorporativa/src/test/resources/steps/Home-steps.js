@@ -104,6 +104,6 @@ Given(/^we validate the footer of page$/, function() {
   expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist();
   expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist();
   expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist();
-  expect($(":root").waitTime(2, timeUnits.SECONDS);
+  $(":root").waitTime(2, timeUnits.SECONDS);
   browser.quit();
 });
