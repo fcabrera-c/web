@@ -105,9 +105,9 @@ Given(/^we change the theme to dark$/, function() {
 
 Given(/^we validate the footer of page$/, function() {
   $("#main-footer > div > div > div > figure > img").scrollIntoView();
-  $("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon").moveTo();
-  $("#main-footer > div > div > div > section > a.menu-social.footer-twitter").moveTo();
-  $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").moveTo();
-  $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").moveTo();
+  $("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon").to.exist();
+  $("#main-footer > div > div > div > section > a.menu-social.footer-twitter").to.exist();
+  $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").to.exist();
+  $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").to.exist();
   $(":root").waitTime(2, timeUnits.SECONDS);
 });
