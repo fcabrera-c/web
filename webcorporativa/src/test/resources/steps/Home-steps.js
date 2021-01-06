@@ -59,22 +59,17 @@ Given(/^we validate the sexth section of the page$/, function() {
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(1)")).to.exist("Citibanamex");
   $("#confianza > div > div.row.clients-logos > div:nth-child(1)").moveTo();
   $(":root").waitTime(1, timeUnits.SECONDS);
-  $(":root").waitTime(1, timeUnits.SECONDS);
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(2)")).to.exist("Scotiabanck");
   $("#confianza > div > div.row.clients-logos > div:nth-child(2)").moveTo();
-  $(":root").waitTime(1, timeUnits.SECONDS);
   $(":root").waitTime(1, timeUnits.SECONDS);
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(3)")).to.exist("Santander");
   $("#confianza > div > div.row.clients-logos > div:nth-child(3)").moveTo();
   $(":root").waitTime(1, timeUnits.SECONDS);
-  $(":root").waitTime(1, timeUnits.SECONDS);
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(4)")).to.exist("BBVA");
   $("#confianza > div > div.row.clients-logos > div:nth-child(4)").moveTo();
   $(":root").waitTime(1, timeUnits.SECONDS);
-  $(":root").waitTime(1, timeUnits.SECONDS);
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(5)")).to.exist("Banorte");
   $("#confianza > div > div.row.clients-logos > div:nth-child(5)").moveTo();
-  $(":root").waitTime(1, timeUnits.SECONDS);
   $(":root").waitTime(1, timeUnits.SECONDS);
 });
 
@@ -105,10 +100,10 @@ Given(/^we change the theme to dark$/, function() {
 
 Given(/^we validate the footer of page$/, function() {
   $("#main-footer > div > div > div > figure > img").scrollIntoView();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).to.exist("facebook");
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist("twitter");
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist("linkedin");
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist("instagram");
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).to.exist();
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist();
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist();
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist();
   expect($(":root").waitTime(2, timeUnits.SECONDS);
   browser.quit();
 });
