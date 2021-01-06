@@ -107,11 +107,11 @@ Given(/^we change the theme to dark$/, function() {
   $(":root").waitTime(2, timeUnits.SECONDS);
 });
 
-Given(/^we validate the footer of page$/, function() {
-  $("#main-footer > div > div > div > figure > img").scrollIntoView();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).to.exist();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist();
-  $(":root").waitTime(2, timeUnits.SECONDS);
-});
+//Given(/^we validate the footer of page$/, function() {
+  //$("#main-footer > div > div > div > figure > img").scrollIntoView();
+  //expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).to.exist();
+  //expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist();
+  //expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist();
+  //expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist();
+  //$(":root").waitTime(2, timeUnits.SECONDS);
+//});
