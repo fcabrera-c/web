@@ -13,4 +13,4 @@ Feature: Validate module Inicio
     And we validate the seventh section of the page
     And we validate the eigth section of the page
     And we change the theme to dark
-    And we validate the footer of page
+    //And we validate the footer of page
