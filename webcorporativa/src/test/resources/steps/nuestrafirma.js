@@ -1,3 +1,10 @@
+Given(/^we are at home page$/, function() {
+  browser.get("https://sodev.anzen.com.mx:88/");
+  browser.configure().window().maximize();
+  var timeUnits = require("minium/timeunits");
+  $(":root").waitTime(5, timeUnits.SECONDS);
+});
+
 Given(/^we select the module Nuestra firma$/, function() {
   $(".menu-about-us").click();
 });
