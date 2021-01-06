@@ -3,7 +3,6 @@ Given(/^we are at home page$/, function() {
   browser.configure().window().maximize();
   var timeUnits = require("minium/timeunits");
   $(":root").waitTime(5, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the first section of the page$/, function() {
