@@ -9,7 +9,6 @@ Given(/^we validate the first section of the page$/, function() {
   expect($(".bold")).to.exist();
   expect($(".active")).to.exist();
   expect($(".theme-dark")).to.exist();
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the second section of the page$/, function() {
@@ -19,7 +18,6 @@ Given(/^we validate the second section of the page$/, function() {
   expect($("body > app-root > div > div.body > ad-home > ad-how-we-do-it > div > div > div.subtitle.ad-prod-body-1")).to.have.text("Soluciones estratégicas a la medida que proyectan tu negocio a los retos del futuro.");
   expect($("body > app-root > div > div.body > ad-home > ad-how-we-do-it > div > div > div.circles")).to.exist();
   $(":root").waitTime(2, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the third section of the page$/, function() {
@@ -32,7 +30,6 @@ Given(/^we validate the third section of the page$/, function() {
   expect($(".tertiary-60")).to.exist();
   expect($(".tertiary-70")).to.exist();
   $(":root").waitTime(2, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 Given(/^we validate the fourth section of the page$/, function() {
   $("body > app-root > div > div.body > ad-home > ad-solutions > div").scrollIntoView();
@@ -40,7 +37,6 @@ Given(/^we validate the fourth section of the page$/, function() {
   expect($("body > app-root > div > div.body > ad-home > ad-solutions > div > div > div.solutions-content.col > div > div.title.ad-prod-h3.bold")).to.have.text("Soluciones globales");
   expect($("body > app-root > div > div.body > ad-home > ad-solutions > div > div > div.solutions-content.col > div > div.subtitle.ad-prod-subtitle-1")).to.exist();
   $(":root").waitTime(2, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the fifth section of the page$/, function() {
@@ -54,7 +50,6 @@ Given(/^we validate the fifth section of the page$/, function() {
   expect($(".magenta-to-purple-light")).to.have.text("Onboarding digital");
   expect($(".red-to-purple-medium")).to.have.text("Wallet solution");
   $(":root").waitTime(2, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the sexth section of the page$/, function() {
@@ -76,7 +71,6 @@ Given(/^we validate the sexth section of the page$/, function() {
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(5)")).to.exist("Banorte");
   $("#confianza > div > div.row.clients-logos > div:nth-child(5)").moveTo();
   $(":root").waitTime(1, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the seventh section of the page$/, function() {
@@ -86,7 +80,6 @@ Given(/^we validate the seventh section of the page$/, function() {
   expect($("#colabora > div > div > div > p")).to.have.text("Compártenos tu experiencia y evolucionemos juntos.");
   expect($("#colabora > div > div > div > a")).to.have.text("Ver todas las vacantes");
   $(":root").waitTime(2, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the eigth section of the page$/, function() {
@@ -95,23 +88,21 @@ Given(/^we validate the eigth section of the page$/, function() {
   expect($("#idea > div > div > div > h2")).to.have.text("¿Tienes una idea?");
   expect($("#idea > div > div > div > a > an-icon")).to.exist("Cuéntanos sobre ella");
   $(":root").waitTime(2, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we change the theme to dark$/, function() {
   $("body > app-root > div > div.body > ad-home > ad-us > div").scrollIntoView();
   $("body > app-root > div > div.body > ad-home > ad-us > div > div > div.dots > ad-theme-switch > div > div.theme-dark").click();
   $(":root").waitTime(2, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $("body > app-root > div > div.body > ad-home > ad-us > div > div > div.dots > ad-theme-switch > div > div.theme-light > an-icon").click();
   $(":root").waitTime(2, timeUnits.SECONDS);
 });
 
-//Given(/^we validate the footer of page$/, function() {
-  //$("#main-footer > div > div > div > figure > img").scrollIntoView();
-  //expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).to.exist();
-  //expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist();
-  //expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist();
-  //expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist();
-  //$(":root").waitTime(2, timeUnits.SECONDS);
-//});
+Given(/^we validate the footer of page$/, function() {
+  $("#main-footer > div > div > div > figure > img").scrollIntoView();
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).to.exist();
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist();
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist();
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist();
+  $(":root").waitTime(2, timeUnits.SECONDS);
+});
