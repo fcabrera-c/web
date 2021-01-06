@@ -1,4 +1,4 @@
-Given(/^we are at home page$/, function() {
+Given(/^we are at the home page$/, function() {
   browser.get("https://sodev.anzen.com.mx:88/");
   browser.configure().window().maximize();
   var timeUnits = require("minium/timeunits");
