@@ -141,11 +141,11 @@ Given(/^we change the theme to dark$/, function() {
 Given(/^we validate the footer of page "([^"]*)"$/, function(arg1) {
   $("#main-footer > div > div > div > figure > img").scrollIntoView();
   $("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon").moveTo();
-  $(":root").waitTime(2, timeUnits.SECONDS);
+  $(":root").waitTime(3, timeUnits.SECONDS);
   $("#main-footer > div > div > div > section > a.menu-social.footer-twitter").moveTo();
-  $(":root").waitTime(2, timeUnits.SECONDS);
+  $(":root").waitTime(3, timeUnits.SECONDS);
   $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").moveTo();
-  $(":root").waitTime(2, timeUnits.SECONDS);
+  $(":root").waitTime(3, timeUnits.SECONDS);
   $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").moveTo();
-  $(":root").waitTime(2, timeUnits.SECONDS);
+  $(":root").waitTime(5, timeUnits.SECONDS);
 });
