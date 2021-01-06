@@ -105,10 +105,10 @@ Given(/^we change the theme to dark$/, function() {
 
 Given(/^we validate the footer of page$/, function() {
   $("#main-footer > div > div > div > figure > img").scrollIntoView();
-  $("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon").to.exist("facebook");
-  #main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon
-  $("#main-footer > div > div > div > section > a.menu-social.footer-twitter").to.exist("twitter");
-  $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").to.exist("linkedin");
-  $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").to.exist("instagram");
-  $(":root").waitTime(2, timeUnits.SECONDS);
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).to.exist("facebook");
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist("twitter");
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist("linkedin");
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist("instagram");
+  expect($(":root").waitTime(2, timeUnits.SECONDS);
+  browser.quit();
 });
