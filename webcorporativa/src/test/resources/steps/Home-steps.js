@@ -111,5 +111,4 @@ Given(/^we validate the footer of page$/, function() {
   $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").to.exist("linkedin");
   $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").to.exist("instagram");
   $(":root").waitTime(2, timeUnits.SECONDS);
-  browser.quit();
 });
