@@ -14,6 +14,7 @@ Given(/^we validate the first section of Nuestra firma$/, function() {
   expect($(".theme-light")).to.exist();
   expect($(".theme-dark")).to.exist();
   $(":root").waitTime(3, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the second section of Nuestra firma$/, function() {
@@ -22,6 +23,7 @@ Given(/^we validate the second section of Nuestra firma$/, function() {
   expect($(".business > div:nth-child(2) > div:nth-child(1)")).to.exist();
   expect($(".business > div:nth-child(2) > div:nth-child(2)")).to.exist();
   $(":root").waitTime(3, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the third section of Nuestra firma$/, function() {
@@ -34,6 +36,7 @@ Given(/^we validate the third section of Nuestra firma$/, function() {
   expect($("div.c-3:nth-child(3)")).to.exist();
   expect($("div.c-3:nth-child(4)")).to.exist();
   $(":root").waitTime(3, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the fourth section of Nuestra firma$/, function() {
@@ -85,6 +88,7 @@ Given(/^we validate the fourth section of Nuestra firma$/, function() {
   expect($("div.c-md-6:nth-child(15) > img:nth-child(1)")).to.have.text("");
   $("div.c-md-6:nth-child(15) > img:nth-child(1)").moveTo();
   $(":root").waitTime(2, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the fifth section of Nuestra firma$/, function() {
@@ -93,18 +97,24 @@ Given(/^we validate the fifth section of Nuestra firma$/, function() {
   expect($(".idea > div:nth-child(2) > div:nth-child(2)")).to.have.text("Trabajamos como un socio de innovación digital, mejorando la eficiencia del negocio por medio de estrategias omnicanal y Metodologías Ágiles.");
   expect($("a.ad-prod-body-1 > an-icon:nth-child(1)")).to.have.text("");
   $(":root").waitTime(3, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Then(/^we switch the theme to dark$/, function() {
   $("body > app-root > div > div.body > ad-about-us > ad-header-about-us > div").scrollIntoView();
   $("body > app-root > div > div.body > ad-about-us > ad-header-about-us > div > div > div.dots > ad-theme-switch > div > div.theme-dark").click();
   $(":root").waitTime(2, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(".body > ad-about-us:nth-child(2) > ad-business:nth-child(2) > div:nth-child(1)").scrollIntoView();
   $(":root").waitTime(2, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(".body > ad-about-us:nth-child(2) > ad-strategies:nth-child(3) > div:nth-child(1)").scrollIntoView();
   $(":root").waitTime(2, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(".body > ad-about-us:nth-child(2) > ad-firma-confianza:nth-child(4)").scrollIntoView();
   $(":root").waitTime(2, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(".body > ad-about-us:nth-child(2) > ad-tell-idea:nth-child(5) > div:nth-child(1)").scrollIntoView();
   $(":root").waitTime(2, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
