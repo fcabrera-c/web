@@ -107,5 +107,4 @@ Then(/^we switch the theme to dark$/, function() {
   $(":root").waitTime(2, timeUnits.SECONDS);
   $(".body > ad-about-us:nth-child(2) > ad-tell-idea:nth-child(5) > div:nth-child(1)").scrollIntoView();
   $(":root").waitTime(2, timeUnits.SECONDS);
-  browser.quit();
 });
