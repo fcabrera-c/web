@@ -64,22 +64,23 @@ Given(/^we validate the sexth section of the page$/, function() {
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(1)")).to.exist("Citibanamex");
   $("#confianza > div > div.row.clients-logos > div:nth-child(1)").moveTo();
   $(":root").waitTime(1, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(2)")).to.exist("Scotiabanck");
   $("#confianza > div > div.row.clients-logos > div:nth-child(2)").moveTo();
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(1, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(3)")).to.exist("Santander");
   $("#confianza > div > div.row.clients-logos > div:nth-child(3)").moveTo();
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(1, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(4)")).to.exist("BBVA");
   $("#confianza > div > div.row.clients-logos > div:nth-child(4)").moveTo();
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(1, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   expect($("#confianza > div > div.row.clients-logos > div:nth-child(5)")).to.exist("Banorte");
   $("#confianza > div > div.row.clients-logos > div:nth-child(5)").moveTo();
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(1, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
 Given(/^we validate the seventh section of the page$/, function() {
@@ -112,9 +113,12 @@ Given(/^we change the theme to dark$/, function() {
 
 Given(/^we validate the footer of page$/, function() {
   $("#main-footer > div > div > div > figure > img").scrollIntoView();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).to.exist();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).to.exist();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).to.exist();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).to.exist();
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).moveTo();
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).moveTo();
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).moveTo();
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
+  expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).moveTo();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
