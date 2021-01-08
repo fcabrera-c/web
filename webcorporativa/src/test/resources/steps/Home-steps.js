@@ -106,6 +106,7 @@ Given(/^we change the theme to dark$/, function() {
   $("body > app-root > div > div.body > ad-home > ad-us > div").scrollIntoView();
   $("body > app-root > div > div.body > ad-home > ad-us > div > div > div.dots > ad-theme-switch > div > div.theme-dark").click();
   $(":root").waitTime(2, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $("body > app-root > div > div.body > ad-home > ad-us > div > div > div.dots > ad-theme-switch > div > div.theme-light > an-icon").click();
   $(":root").waitTime(2, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
@@ -120,5 +121,4 @@ Given(/^we validate the footer of page$/, function() {
   $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").moveTo();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
   $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").moveTo();
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
