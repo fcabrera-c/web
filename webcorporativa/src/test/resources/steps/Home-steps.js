@@ -113,12 +113,12 @@ Given(/^we change the theme to dark$/, function() {
 
 Given(/^we validate the footer of page$/, function() {
   $("#main-footer > div > div > div > figure > img").scrollIntoView();
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon")).moveTo();
+  $("#main-footer > div > div > div > section > a.menu-social.footer-facebook > an-icon").moveTo();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-twitter")).moveTo();
+  $("#main-footer > div > div > div > section > a.menu-social.footer-twitter").moveTo();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-linkedin")).moveTo();
+  $("#main-footer > div > div > div > section > a.menu-social.footer-linkedin").moveTo();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
-  expect($("#main-footer > div > div > div > section > a.menu-social.footer-instagram")).moveTo();
+  $("#main-footer > div > div > div > section > a.menu-social.footer-instagram").moveTo();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
