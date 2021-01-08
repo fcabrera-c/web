@@ -2,7 +2,7 @@ Given(/^we are at the home page$/, function() {
   browser.get("https://sodev.anzen.com.mx:88/");
   browser.configure().window().maximize();
   var timeUnits = require("minium/timeunits");
-  $(":root").waitTime(5, timeUnits.SECONDS);
+  $(":root").waitTime(2, timeUnits.SECONDS);
 });
 
 Given(/^we select the module Nuestra firma$/, function() {
@@ -13,7 +13,7 @@ Given(/^we validate the first section of Nuestra firma$/, function() {
   expect($(".bold")).to.exist();
   expect($(".theme-light")).to.exist();
   expect($(".theme-dark")).to.exist();
-  $(":root").waitTime(3, timeUnits.SECONDS);
+  $(":root").waitTime(1, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
@@ -22,7 +22,7 @@ Given(/^we validate the second section of Nuestra firma$/, function() {
   expect($(".business > div:nth-child(1) > img:nth-child(1)")).to.exist();
   expect($(".business > div:nth-child(2) > div:nth-child(1)")).to.exist();
   expect($(".business > div:nth-child(2) > div:nth-child(2)")).to.exist();
-  $(":root").waitTime(3, timeUnits.SECONDS);
+  $(":root").waitTime(1, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
@@ -35,7 +35,7 @@ Given(/^we validate the third section of Nuestra firma$/, function() {
   expect($("div.c-3:nth-child(2)")).to.exist();
   expect($("div.c-3:nth-child(3)")).to.exist();
   expect($("div.c-3:nth-child(4)")).to.exist();
-  $(":root").waitTime(3, timeUnits.SECONDS);
+  $(":root").waitTime(1, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
@@ -96,7 +96,7 @@ Given(/^we validate the fifth section of Nuestra firma$/, function() {
   expect($(".idea > div:nth-child(2) > div:nth-child(1)")).to.have.text("Impulsamos los negocios de hoy con la tecnología del mañana");
   expect($(".idea > div:nth-child(2) > div:nth-child(2)")).to.have.text("Trabajamos como un socio de innovación digital, mejorando la eficiencia del negocio por medio de estrategias omnicanal y Metodologías Ágiles.");
   expect($("a.ad-prod-body-1 > an-icon:nth-child(1)")).to.have.text("");
-  $(":root").waitTime(3, timeUnits.SECONDS);
+  $(":root").waitTime(1, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 
