@@ -116,5 +116,4 @@ Then(/^we switch the theme to dark$/, function() {
   scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(".body > ad-about-us:nth-child(2) > ad-tell-idea:nth-child(5) > div:nth-child(1)").scrollIntoView();
   $(":root").waitTime(2, timeUnits.SECONDS);
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
